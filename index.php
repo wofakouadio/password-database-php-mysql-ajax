@@ -50,7 +50,12 @@
 
                                             <div class='form-group'>
                                                 <label for="Password">Password</label>
-                                                <input type="password" name="si-user_pass" id="si-user_pass" class="form-control">
+                                                <!-- <input type="password" name="si-user_pass" id="si-user_pass" class="form-control"> -->
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" name="si-user_pass" id="si-user_pass">
+                                                    <button class="btn btn-secondary" type="button" id="button-show-password-si"><i class="fa fa-eye-slash"></i></button>
+                                                </div>
+                                                
                                             </div>
 
                                             <div class='form-group'>
@@ -114,7 +119,11 @@
                                                 <div class="col">
                                                     <div class='form-group'>
                                                         <label for="Password">Password</label>
-                                                        <input type="password" name="su-user_pass" id="su-user_pass" class="form-control">
+                                                        <!-- <input type="password" name="su-user_pass" id="su-user_pass" class="form-control"> -->
+                                                        <div class="input-group">
+                                                            <input type="password" class="form-control" name="su-user_pass" id="su-user_pass">
+                                                            <button class="btn btn-secondary" type="button" id="button-show-password-su"><i class="fa fa-eye-slash"></i></button>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -128,7 +137,7 @@
                                             </div><br> 
                                             
                                             <div class="form-check">
-                                                <input type="checkbox" name="agreed_terms_conditions" id="agreed_terms_conditions" class="form-check-input bg-warning">
+                                                <input type="checkbox" name="agreed_terms_conditions" id="agreed_terms_conditions" class="form-check-input">
                                                 <label for="form-check-input">I agree to the terms, conditions and policies</label>
                                             </div>
 

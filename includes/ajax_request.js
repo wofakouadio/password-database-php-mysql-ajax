@@ -3,6 +3,47 @@ $(document).ready(function() {
     $(".alert").hide();
 
     /**
+     * show password on signin form
+     */
+    $("#button-show-password-si").on("click", function(e) {
+
+        e.preventDefault();
+
+        if ($("#si-user_pass").attr("type") == "text") {
+            $("#si-user_pass").attr("type", "password")
+            $("#button-show-password-si i").removeClass("fa-eye");
+            $("#button-show-password-si i").addClass("fa-eye-slash");
+
+        } else if ($("#si-user_pass").attr("type") == "password") {
+            $("#si-user_pass").attr("type", "text")
+            $("#button-show-password-si i").removeClass("fa-eye-slash");
+            $("#button-show-password-si i").addClass("fa-eye");
+        }
+
+    });
+
+    /**
+     * show and hide password on signup form
+     */
+    $("#button-show-password-su").on("click", function(e) {
+
+        e.preventDefault();
+
+        if ($("#su-user_pass").attr("type") == "text") {
+            $("#su-user_pass").attr("type", "password");
+            $("#button-show-password-su i").removeClass("fa-eye");
+            $("#button-show-password-su i").addClass("fa-eye-slash");
+
+        } else if ($("#su-user_pass").attr("type") == "password") {
+            $("#su-user_pass").attr("type", "text");
+            $("#button-show-password-su i").removeClass("fa-eye-slash");
+            $("#button-show-password-su i").addClass("fa-eye");
+        }
+
+    });
+
+
+    /**
      * submit signup form
      * validating field and serializing 
      */
@@ -92,6 +133,14 @@ $(document).ready(function() {
 
             $(".alert").show().addClass("alert alert-warning");
             $(".alert").html("Password should contain between 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character");
+            $(".alert").fadeTo(3000, 500).slideUp(3000, function() {
+                $(".alert").slideUp(3000);
+            });
+
+        } else if (!$("#agreed_terms_conditions").is(":checked")) {
+
+            $(".alert").show().addClass("alert alert-warning");
+            $(".alert").html("Please agree to the terms and conditions by carefully reading them before continuing");
             $(".alert").fadeTo(3000, 500).slideUp(3000, function() {
                 $(".alert").slideUp(3000);
             });
